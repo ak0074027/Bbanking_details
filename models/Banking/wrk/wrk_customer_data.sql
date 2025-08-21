@@ -1,0 +1,11 @@
+WITH customer_data AS (
+    SELECT
+        Customer_ID,
+        First_Name,
+        Last_Name,
+        DOB,
+        Email,
+        Phone,
+        Created_At AS Customer_Created_At
+    FROM {{ source('banking_data', 'Customer') }}
+)
