@@ -3,7 +3,7 @@ version: 2
 models:
   - name: wrk_customer_data
     description: "This is customer-related data."
-    tags: ['yml_wrk_customer_data']
+    tags: ["yml_wrk_customer_data"]
     columns:
       - name: Customer_ID
         description: "Unique identifier for each customer."
