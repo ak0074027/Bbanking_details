@@ -1,11 +1,30 @@
-WITH customer_data AS (
-SELECT
-Customer_ID,
-First_Name,
-Last_Name,
-DOB,
-Email,
-Phone,
-Created_At AS Customer_Created_At
-FROM {{ source('banking_data', 'Customer') }}
-)
+version: 2
+
+models:
+  - name: wrk_customer_data
+    description: "This is customer-related data."
+    tags: ['yml_wrk_customer_data']
+    columns:
+      - name: Customer_ID
+        description: "Unique identifier for each customer."
+
+      - name: First_Name
+        description: "Customer's first name."
+
+      - name: Last_Name
+        description: "Customer's last name."
+
+      - name: DOB
+        description: "Date of birth of the customer."
+
+      - name: Email
+        description: "Customer's email address."
+
+      - name: Phone
+        description: "Customer's phone number."
+
+      - name: Address
+        description: "Customer's residential address."
+
+      - name: Created_At
+        description: "Timestamp when the customer record was created."
