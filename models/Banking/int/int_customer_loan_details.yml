@@ -36,8 +36,7 @@ models:
       - name: principal_amount
         description: The original amount issued for the loan.
         tests:
-          - not_null
-         
+          - not_null        
       - name: interest_rate
         description: Annual interest rate applied to the loan.
         tests:
