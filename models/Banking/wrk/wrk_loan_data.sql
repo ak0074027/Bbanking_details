@@ -11,7 +11,7 @@ with loan_data as
         Status
 from BANKING_DB.BANING_DETAILS.LOAN
 
------from {{ source('banking_data', 'loan') }}
+
 )
 
 select * from loan_data
