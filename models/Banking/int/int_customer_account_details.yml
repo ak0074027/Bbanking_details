@@ -56,6 +56,8 @@ models:
 
       - name: branch_name
         description: Name of the bank branch associated with the account.
+        tests:
+          - not_null
 
       - name: branch_address
         description: Address of the bank branch.
