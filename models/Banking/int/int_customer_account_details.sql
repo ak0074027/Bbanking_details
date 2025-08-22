@@ -4,10 +4,10 @@
 
 SELECT
     c.customer_id,
-    c.LOWER(first_name) AS first_name,
-    c.LOWER(last_name) AS last_namelast_name,
+    c.first_name AS first_name,
+    c.last_name AS last_namelast_name,
     c.dob,
-    c.LOWER(email) AS email,
+    c.email AS email,
     c.phone,
     a.account_id,
     a.account_type,
