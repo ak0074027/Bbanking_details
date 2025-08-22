@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: banking_data
+    database: BANKING_DB  # optional, if different from profile default
+    schema: BANING_DETAILS
+    tables:
+      - name: Customer
+      - name: Branch
+      - name: Employee
+      - name: Account
+      - name: Transaction
+      - name: Loan
+      - name: Credit_Score
