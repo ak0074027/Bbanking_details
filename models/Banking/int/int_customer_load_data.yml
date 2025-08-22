@@ -15,8 +15,8 @@ models:
         tests:
           - not_null
           - relationships:
-              to: customer
-              field: Customer_ID
+            to: ref('customer')
+            field: Customer_ID
 
       - name: Principal_Amount
         tests:
