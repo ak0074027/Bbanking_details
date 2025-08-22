@@ -32,7 +32,11 @@ models:
 
       - name: account_id
         description: Unique identifier for the customer's account.
-        # No tests, as a customer may not have an account
+        tests:
+          - not_null
+          - unique
+          
+        
 
       - name: account_type
         description: Type of account (e.g., savings, checking).
@@ -47,6 +51,8 @@ models:
 
       - name: account_created_at
         description: Timestamp when the account was created.
+        tests:
+          - not_null
 
       - name: branch_name
         description: Name of the bank branch associated with the account.
