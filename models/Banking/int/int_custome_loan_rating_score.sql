@@ -22,8 +22,8 @@ With credit_score as(SELECT
     c.SCORE,
     c.SCORE_SOURCE
 
-FROM {{ ref('wrk_customer_set') }} a
-LEFT JOIN {{ ref('wrk_loan_set') }} b
+FROM {{ ref('wrk_customer_data') }} a
+LEFT JOIN {{ ref('wrk_loan_data') }} b
     ON a.CUSTOMER_ID = b.CUSTOMER_ID
 LEFT JOIN {{ ref('wrk_Credit_Score_data') }} c
     ON a.CUSTOMER_ID = c.CUSTOMER_ID)
