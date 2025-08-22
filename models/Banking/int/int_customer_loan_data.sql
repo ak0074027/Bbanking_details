@@ -21,8 +21,7 @@ customer_data as (
         concat(First_Name, ' ', Last_Name) as Customer_Full_Name,
         DOB,
         Email,
-        Phone,
-        Address
+        Phone
     from {{ ref('wrk_customer_data') }}
 ),
 
@@ -34,7 +33,6 @@ loan_enriched as (
         c.DOB,
         c.Email,
         c.Phone,
-        c.Address,
         l.Account_ID,
         l.Loan_Type,
         l.Principal_Amount,
