@@ -1,0 +1,74 @@
+version: 2
+
+models:
+  - name: customer_full_bank_details
+    description: >
+      Combines customer information with their account and loan data, giving a unified view
+      of a customer's financial profile including balances, loan details, and branch information.
+    tags: ['customer_full_bank_details']   
+    columns:
+      - name: customer_id
+        description: Unique identifier for the customer.
+
+
+      - name: first_name
+        description: Customer's first name.
+
+      - name: last_name
+        description: Customer's last name.
+
+      - name: dob
+        description: Date of birth of the customer.
+
+      - name: email
+        description: Customer's email address.
+
+
+      - name: phone
+        description: Customer's phone number.
+
+      - name: account_id
+        description: ID of the account associated with the customer.
+
+
+      - name: account_type
+        description: Type of the customer account (e.g., savings, checking).
+
+
+      - name: account_balance
+        description: Current balance in the customer's account.
+
+
+      - name: account_created_at
+        description: Timestamp when the account was created.
+
+      - name: branch_name
+        description: Name of the bank branch where the account is held.
+
+      - name: branch_address
+        description: Address of the bank branch.
+
+      - name: loan_id
+        description: Unique identifier for the loan associated with the customer.
+        # No test: may be null if customer has no loan
+
+      - name: loan_type
+        description: Type of loan taken by the customer.
+
+
+      - name: principal_amount
+        description: The original amount of the loan.
+
+
+      - name: interest_rate
+        description: Annual interest rate of the loan.
+
+      - name: loan_start_date
+        description: Date the loan started.
+
+      - name: loan_end_date
+        description: Scheduled end date of the loan.
+
+      - name: loan_status
+        description: Current status of the loan.
+
