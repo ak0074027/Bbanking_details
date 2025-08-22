@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: wrk_Credit_Score
+    description: >
+      This table records credit scores for customers, capturing each customer's credit score history 
+      over time. Each record represents a specific score on a given date from a specific source.
+    tags: ["yml_wrk_Credit_Score"]  
+
+    columns:
+      - name: customer_id
+        description: >
+          Unique identifier for the customer. Acts as a foreign key referencing the Customer table.
+
+      - name: score_date
+        description: >
+          The date the credit score was recorded. Part of the primary key.
+
+      - name: score
+        description: >
+          The credit score value assigned to the customer on the given date. Typically based on data 
+          from a third-party source or credit bureau.
+
+      - name: score_source
+        description: >
+          The origin or provider of the credit score, e.g., Experian, Equifax, etc.
+
