@@ -9,6 +9,7 @@ with loan_data as
         Start_Date,
         End_Date,
         Status
-from BANKING_DB.BANING_DETAILS.LOAN)
+from BANKING_DB.BANING_DETAILS.LOAN
+)
 
 select * from loan_data
