@@ -55,4 +55,4 @@ models:
         tests:
           - not_null
           - accepted_values:
-              values: ['active', 'closed', 'pending']
+              values: ['active', 'pending']
