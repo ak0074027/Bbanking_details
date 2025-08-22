@@ -21,6 +21,9 @@ models:
 
       - name: dob
         description: Date of birth of the customer.
+        tests:
+          - not_null
+          - unique
 
       - name: email
         description: Customer's email address.
