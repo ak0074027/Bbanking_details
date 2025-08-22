@@ -2,6 +2,55 @@ version: 2
 
 models:
   - name: int_customer_loan_data
+    description: " loan data combining loans and customer info"
+    tags: ['yml_int_customer_loan_data']
+    columns:
+      - name: Loan_ID
+        tests:
+          - unique
+          - not_null
+
+      - name: Customer_ID
+        tests:
+          - not_null
+          - relationships:
+              to: customer
+              field: Customer_ID
+
+      - name: Principal_Amount
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: "Principal_Amount >= 0"
+
+      - name: Interest_Rate
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: "Interest_Rate >= 0"
+
+      - name: Start_Date
+        tests:
+          - not_null
+
+      - name: End_Date
+        tests:
+          - not_null
+          # For date logic, define a custom test if needed
+
+      - name: Status
+        tests:
+          - not_null
+
+      - name: Loan_Status
+        tests:
+          - not_null
+
+      - name: Email
+        tests:
+          - not_null
+models:
+  - name: int_customer_loan_data
     description: "Loan data"
     tags: ['yml_int_customer_loan_data']
     columns:
