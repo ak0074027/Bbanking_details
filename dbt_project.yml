@@ -34,9 +34,12 @@ clean-targets:         # directories to be removed by `dbt clean`
 # instead be materialized as tables. Any models you add to the root of the models folder will 
 # continue to be built as views. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
-
+packages:
+  - package: dbt-labs/dbt_utils
+    version: [">=1.1.0", "<2.0.0"]
 models:
   my_new_project:
     # Applies to all files under models/example/
     example:
       +materialized: table
+
