@@ -9,7 +9,6 @@ SELECT
     c.dob,
     c.LOWER(email) AS email,
     c.phone,
-    c.address AS customer_address,
     a.account_id,
     a.account_type,
     a.balance,
