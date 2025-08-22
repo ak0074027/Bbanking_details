@@ -1,6 +1,5 @@
 version: 2
 
-
 models:
   - name: int_customer_loan_data
     description: " loan data combining loans and customer info"
@@ -15,8 +14,8 @@ models:
         tests:
           - not_null
           - relationships:
-            to: ref('customer')
-            field: Customer_ID
+              to: customer
+              field: Customer_ID
 
       - name: Principal_Amount
         tests:
