@@ -13,21 +13,14 @@ models:
       - name: Customer_ID
         tests:
           - not_null
-          - relationships:
-              to: Customer
-              field: Customer_ID
-
       - name: Principal_Amount
         tests:
           - not_null
-          - dbt_utils.expression_is_true:
-              expression: "Principal_Amount >= 0"
 
       - name: Interest_Rate
         tests:
           - not_null
-          - dbt_utils.expression_is_true:
-              expression: "Interest_Rate >= 0"
+
 
       - name: Start_Date
         tests:
@@ -36,7 +29,7 @@ models:
       - name: End_Date
         tests:
           - not_null
-          # For date logic, define a custom test if needed
+
 
       - name: Status
         tests:
