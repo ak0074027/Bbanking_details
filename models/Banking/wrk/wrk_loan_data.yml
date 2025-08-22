@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: wrk_loan_data
+    description: "This is customer-related data."
+    tags: ["yml_wrk_loan_data"]
+    columns:
+          - name: Loan_ID
+            description: "Primary key for loan"
+          - name: Customer_ID
+            description: "Foreign key to Customer"
+          - name: Account_ID
+            description: "Foreign key to Account"
+          - name: Loan_Type
+            description: "Type of loan"
+          - name: Principal_Amount
+            description: "Principal loan amount"
+          - name: Interest_Rate
+            description: "Interest rate for the loan"
+          - name: Start_Date
+            description: "Loan start date"
+          - name: End_Date
+            description: "Loan end date"
+          - name: Status
+            description: "Loan status"
