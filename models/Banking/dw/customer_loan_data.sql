@@ -1,5 +1,4 @@
-{{ config(materialized='table') }}
+{{ config(materialized="table") }} 
 
-select *
 
-    from {{ ref('int_customer_loan_data') }} 
+select * from {{ ref("int_customer_loan_data") }}
