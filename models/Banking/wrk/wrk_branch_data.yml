@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: wrk_branch_data
+    description: "This is cubranch-related data."
+    tags: ["yml_wrk_branch_data"]
+    columns:
+      - name: branch_id
+        description: Unique identifier for each branch. Acts as the primary key.
+      - name: branch_name
+        description: The name of the branch, typically indicating its location or function.
+
+      - name: address
+        description: Full postal address of the branch.
+
+      - name: manager_id
+        description: Identifier of the manager responsible for the branch.
