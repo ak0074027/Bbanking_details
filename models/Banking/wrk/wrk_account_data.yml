@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: wrk_account_data
+    description: "This is account data."
+    tags: ["yml_wrk_account_data"]
+    columns:
+      - name: account_id
+        description: >
+          Unique identifier for each account. Acts as the primary key of the table.
+        tests:
+          - not_null
+          - unique
+
+      - name: customer_id
+        description: >
+          Identifier of the customer who owns the account. Foreign key referencing the Customer table.
+
+      - name: branch_id
+        description: >
+          Identifier of the branch where the account was created or is managed.
+          Foreign key referencing the Branch table.
+
+      - name: account_type
+        description: >
+          Type of the account (e.g., Savings, Checking, Fixed Deposit).
+
+      - name: balance
+        description: >
+          Current balance in the account, stored as a decimal with two decimal places.
+
+      - name: created_at
+        description: >
+          Timestamp when the account was created. Defaults to the current timestamp at insertion.
