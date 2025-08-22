@@ -38,7 +38,7 @@ models:
         description: Type of account (e.g., savings, checking).
         tests:
           - accepted_values:
-              values: ['savings', 'checking', 'credit']
+              values: ['savings', 'Fixed Deposit', 'Checking','Current']
 
       - name: balance
         description: Current balance in the customer's account.
