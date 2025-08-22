@@ -7,7 +7,9 @@ DOB,
 Email,
 Phone,
 Created_At AS Customer_Created_At
-FROM BANKING_DB.BANING_DETAILS.CUSTOMER
+----FROM BANKING_DB.BANING_DETAILS.CUSTOMER
+
+FROM {{ source('banking_data', 'Customer') }}
 )
 
 SELECT *
