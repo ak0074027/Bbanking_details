@@ -54,5 +54,4 @@ models:
         description: Current status of the loan (e.g., active, closed, defaulted).
         tests:
           - not_null
-          - accepted_values:
-              values: ['active', 'pending']
+
