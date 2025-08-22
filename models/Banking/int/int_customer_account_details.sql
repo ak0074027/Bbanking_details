@@ -5,7 +5,7 @@
 SELECT
     c.customer_id,
     c.first_name AS first_name,
-    c.last_name AS last_namelast_name,
+    c.last_name AS last_name,
     c.dob,
     c.email AS email,
     c.phone,
