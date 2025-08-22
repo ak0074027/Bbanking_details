@@ -11,8 +11,6 @@ SELECT
     ca.dob,
     ca.email,
     ca.phone,
-    ca.customer_address,
-
     ca.account_id AS account_id,
     ca.account_type,
     ca.balance AS account_balance,
