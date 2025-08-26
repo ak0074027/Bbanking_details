@@ -1,19 +1,4 @@
-version: 2
-
-models:
-  - name: wrk_Transaction_data
-    description: "Contains all transactions performed on accounts including deposits, withdrawals, and transfers."
-    columns:
-      - name: Transaction_ID
-        description: "Unique identifier for each transaction."
-      - name: Account_ID
-        description: "Foreign key linking to the Account where this transaction occurred."
-      - name: Transaction_Type
-        description: "Type of transaction such as Deposit, Withdrawal, or Transfer."
-      - name: Amount
-        description: "Monetary value involved in the transaction."
-      - name: Transaction_Date
-        description: "Timestamp when the transaction was executed."
-      - name: Description
-        description: "Additional details or notes about the transaction."
-
+with source as (
+    select * from {{ source('your_source_schema', 'Transaction') }}
+)
+banking_data
