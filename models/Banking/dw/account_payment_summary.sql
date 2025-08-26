@@ -20,24 +20,13 @@ payment as (
         customer_id as payment_customer_id,
         card_id,
         payment_mode,
-        payment_status,
-        payment_timestamp
+        payment_status
+    
     from {{ ref('int_payment_summary') }}
 )
 
 select
-    p.payment_id,
-    p.transaction_id,
-    p.account_id,
-    a.customer_id,
-    a.account_type,
-    a.balance,
-    a.account_created_at,
-    a.first_name,
-    a.last_name,
-    p.card_id,
-    p.payment_mode,
-    p.payment_status
+a.*,p.*
     from payment p
 left join account a
     on p.account_id = a.account_id
