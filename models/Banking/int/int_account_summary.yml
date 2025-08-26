@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: int_account_summary
+    description: >
+      This model combines account-level data with customer information by joining
+      the account and customer staging models. Each row represents a single account,
+      enriched with the corresponding customer's name.
+    tags: ['yml_int_account_summary']  
+    columns:
+      - name: account_id
+        description: "Primary key for the account. Uniquely identifies each account."
+        tests:
+          - unique
+          - not_null
+
+      - name: customer_id
+        description: >
+          Foreign key reference to the Customer table. Identifies the customer
+          who owns the account.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('wrk_customer_data')
+              field: customer_id
+
+      - name: account_type
+        description: "The type of the account (e.g., Savings, Checking, Loan, etc.)."
+
+      - name: balance
+        description: "Current balance of the account in currency units."
+
+      - name: created_at
+        description: "Timestamp of when the account was created."
+
+      - name: first_name
+        description: "Customer's first name from the customer dimension."
+
+      - name: last_name
+        description: "Customer's last name from the customer dimension."
