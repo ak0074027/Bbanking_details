@@ -1,24 +1,30 @@
 version: 2
 
 models:
-  name: int_payment_summary
-  description: "Model that joins payment, transaction, and account data."
-  columns:
-    - name: payment_id
-    description:
-      "Primary key for the payment record."
-    name: transaction_id
-    description: "Transaction ID associated with the payment."
-    name: account_id
-    description: "Account associated with the transaction."
-    name: customer_id
-    description: "Customer associated with the account."
-    name: card_id
-    description: "Card used for the payment."
-    name: payment_mode
-    description: "Payment method (e.g., UPI, Card, Wallet)."
-    name: payment_status
-    description: "Status of the payment (Success, Failed, etc)."
-    name: payment_timestamp
-    description: "Timestamp of when the payment was made."
+  - name: int_payment_summary
+    description: "Model that joins payment, transaction, and account data."
+    tags: ["yml_int_payment_summary"]
+    columns:
+      - name: payment_id
+        description: "Primary key for the payment record."
 
+      - name: transaction_id
+        description: "Transaction ID associated with the payment."
+
+      - name: account_id
+        description: "Account associated with the transaction."
+
+      - name: customer_id
+        description: "Customer associated with the account."
+
+      - name: card_id
+        description: "Card used for the payment."
+
+      - name: payment_mode
+        description: "Payment method (e.g., UPI, Card, Wallet)."
+
+      - name: payment_status
+        description: "Status of the payment (Success, Failed, etc)."
+
+      - name: payment_timestamp
+        description: "Timestamp of when the payment was made."
