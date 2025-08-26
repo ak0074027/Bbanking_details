@@ -1,0 +1,32 @@
+models:
+  - name: wrk_Payment_data
+    description: "This is payment-related data."
+    tags: ["yml_wrk_Payment_data"]
+    columns:
+      - name: payment_id
+        description: "Primary key for the Payment table. Uniquely identifies a payment record."
+
+      - name: transaction_id
+        description: >
+          Foreign key reference to the Transaction table. Indicates which transaction
+          this payment is associated with.
+
+      - name: card_id
+        description: >
+          Foreign key reference to the Card table. Indicates which card was used
+          to make this payment.
+
+      - name: payment_mode
+        description: >
+          Specifies the method used to make the payment. Examples include 'Credit Card',
+          'Debit Card', 'UPI', 'NetBanking', etc.
+
+      - name: payment_status
+        description: >
+          Status of the payment attempt. Typical values include 'Success', 'Failed',
+          'Pending', or 'Declined'.
+
+      - name: payment_timestamp
+        description: >
+          The timestamp at which the payment was processed. This helps in tracking
+          the time and order of payments.
