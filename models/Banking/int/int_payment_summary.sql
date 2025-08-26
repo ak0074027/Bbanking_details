@@ -1,4 +1,4 @@
-{% raw %}
+
 {{ config(materialized="table") }}
 
 with payment_data as (
@@ -20,4 +20,3 @@ on t.account_id = a.account_id
 
 select *
 from payment_data
-{% endraw %}
