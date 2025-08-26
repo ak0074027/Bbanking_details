@@ -26,7 +26,13 @@ payment as (
 )
 
 select
-a.*,p.*
+a.*,
+p.payment_id,
+p.transaction_id,
+p.customer_id as payment_customer_id,
+p.card_id,
+p.payment_mode,
+p.payment_status
     from payment p
 left join account a
     on p.account_id = a.account_id
