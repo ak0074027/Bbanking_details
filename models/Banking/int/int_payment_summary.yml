@@ -5,7 +5,8 @@ models:
   description: "Model that joins payment, transaction, and account data."
   columns:
     - name: payment_id
-    description: > "Primary key for the payment record."
+    description:
+      "Primary key for the payment record."
     name: transaction_id
     description: "Transaction ID associated with the payment."
     name: account_id
