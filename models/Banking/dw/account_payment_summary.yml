@@ -1,0 +1,55 @@
+version: 2
+
+models:
+  - name: account_payment_summary
+    description: >
+      This fact model combines payment transaction details with associated account
+      and customer information. It joins data from int_payment_summary and
+      int_account_summary, allowing analysis of payment activity in the context of
+      account type, balance, and customer demographics. Each row represents a
+      single payment event enriched with relevant account and customer attributes.
+    tags: ["account_payment_summary"]
+    columns:
+      - name: payment_id
+        description: "Unique identifier for each payment transaction."
+
+
+      - name: transaction_id
+        description: "Identifier of the transaction that the payment belongs to."
+
+
+      - name: account_id
+        description: "Account ID linked to the payment transaction."
+
+      - name: customer_id
+        description: "Customer who owns the account involved in the payment."
+
+
+      - name: account_type
+        description: "Type of the account (e.g., Savings, Checking, Loan)."
+
+      - name: balance
+        description: "Current balance of the account at the time of reporting."
+
+      - name: account_created_at
+        description: "Timestamp indicating when the account was originally created."
+
+      - name: first_name
+        description: "Customer's first name associated with the account."
+
+      - name: last_name
+        description: "Customer's last name associated with the account."
+
+      - name: card_id
+        description: "Card used to initiate the payment (if applicable)."
+
+      - name: payment_mode
+        description: "Payment method used (e.g., UPI, Card, Wallet, NetBanking)."
+
+
+      - name: payment_status
+        description: "Current status of the payment (e.g., Success, Failed, Pending)."
+
+
+      - name: payment_timestamp
+        description: "Timestamp when the payment was processed or recorded."
