@@ -7,24 +7,52 @@ models:
     columns:
       - name: payment_id
         description: "Primary key for the payment record."
+        tests:
+          - unique
+          - not_null
 
       - name: transaction_id
         description: "Transaction ID associated with the payment."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('wrk_transaction_data')
+              field: transaction_id
 
       - name: account_id
         description: "Account associated with the transaction."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('wrk_account_data')
+              field: account_id
 
       - name: customer_id
         description: "Customer associated with the account."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('wrk_customer_data')
+              field: customer_id
 
       - name: card_id
         description: "Card used for the payment."
+        tests:
+          - relationships:
+              to: ref('wrk_card_data')
+              field: card_id
 
       - name: payment_mode
         description: "Payment method (e.g., UPI, Card, Wallet)."
+        tests:
+          - not_null
 
       - name: payment_status
         description: "Status of the payment (Success, Failed, etc)."
+        tests:
+          - not_null
 
       - name: payment_timestamp
         description: "Timestamp of when the payment was made."
+        tests:
+          - not_null
