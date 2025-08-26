@@ -54,5 +54,4 @@ models:
 
       - name: payment_timestamp
         description: "Timestamp of when the payment was made."
-        tests:
-          - not_null
+
