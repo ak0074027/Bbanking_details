@@ -3,6 +3,7 @@ version: 2
 models:
   - name: wrk_Transaction_data
     description: "Contains all transactions performed on accounts including deposits, withdrawals, and transfers."
+    tags: ["yml_wrk_Transaction_data"]
     columns:
       - name: Transaction_ID
         description: "Unique identifier for each transaction."
