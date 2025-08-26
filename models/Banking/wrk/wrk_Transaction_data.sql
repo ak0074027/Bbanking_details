@@ -1,5 +1,5 @@
 with source as (
-    select * from {{ source('your_source_schema', 'Transaction') }}
+    select * from {{ source('banking_data', 'Transaction') }}
 )
 banking_data
 
