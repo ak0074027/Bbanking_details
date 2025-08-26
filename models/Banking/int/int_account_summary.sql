@@ -10,8 +10,8 @@ with account_data as (
         acct.created_at,
         cust.first_name,
         cust.last_name
-    from {{ ref('stg_account') }} acct
-    left join {{ ref('stg_customer') }} cust
+    from {{ ref('wrk_account_data') }} acct
+    left join {{ ref('wrk_customer_data') }} cust
         on acct.customer_id = cust.customer_id
 )
 
