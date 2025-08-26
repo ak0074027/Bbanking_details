@@ -9,8 +9,8 @@ t.account_id,
 a.customer_id,
 p.card_id,
 p.payment_mode,
-p.payment_status,
-p.payment_timestamp
+p.payment_status
+
 from {{ ref("wrk_Payment_data") }} p
 left join {{ ref("wrk_Transaction_data") }} t
 on p.transaction_id = t.transaction_id
