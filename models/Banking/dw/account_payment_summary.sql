@@ -37,8 +37,7 @@ select
     a.last_name,
     p.card_id,
     p.payment_mode,
-    p.payment_status,
-    p.payment_timestamp
-from payment p
+    p.payment_status
+    from payment p
 left join account a
     on p.account_id = a.account_id
