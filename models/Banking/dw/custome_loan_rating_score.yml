@@ -1,0 +1,64 @@
+version: 2
+
+models:
+  - name: customer_loan_rating_score
+    description: >
+      This model combines customer information with their associated loan details and credit scores.
+      It joins data from the customer, loan, and credit score datasets, allowing downstream analysis
+      of customer behavior, loan performance, and credit risk. The data is joined using left joins, 
+      ensuring all customers are retained even if no corresponding loan or credit score exists.
+    tags: ['customer_loan_rating_score']  
+
+    columns:
+      - name: customer_id
+        description: Unique identifier for the customer.
+
+      - name: first_name
+        description: Customer's first name.
+
+      - name: last_name
+        description: Customer's last name.
+
+      - name: dob
+        description: Customer's date of birth.
+
+      - name: email
+        description: Customer's email address.
+
+      - name: phone
+        description: Customer's phone number.
+
+      - name: customer_created_at
+        description: Timestamp when the customer profile was created.
+
+      - name: loan_id
+        description: Unique identifier for the loan (if any).
+
+
+      - name: account_id
+        description: Identifier for the account associated with the loan.
+
+
+      - name: loan_type
+        description: Type of loan issued (e.g., personal, auto, home).
+
+      - name: principal_amount
+        description: Original amount of the loan issued.
+
+      - name: interest_rate
+        description: Interest rate applied to the loan.
+
+      - name: start_date
+        description: Loan start date.
+
+      - name: end_date
+        description: Loan end date or maturity.
+
+      - name: score_date
+        description: Date the credit score was recorded.
+
+      - name: score
+        description: Credit score assigned to the customer on the score date.
+
+      - name: score_source
+        description: Origin/source of the credit score (e.g., Experian, Equifax).

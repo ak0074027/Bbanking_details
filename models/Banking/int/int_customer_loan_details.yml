@@ -1,0 +1,57 @@
+version: 2
+
+models:
+  - name: int_customer_loan_details
+    description: >
+      This model combines customer and loan information, displaying each loan 
+      along with its type, amount, rate, duration, and the associated customer.
+    tags: ['yml_int_customer_loan_details']  
+    columns:
+      - name: loan_id
+        description: Unique identifier for each loan.
+        tests:
+          - not_null
+          - unique
+
+      - name: customer_id
+        description: Unique identifier for the customer associated with the loan.
+        tests:
+          - not_null
+
+      - name: first_name
+        description: First name of the customer.
+
+      - name: last_name
+        description: Last name of the customer.
+
+      - name: account_id
+        description: Identifier for the account linked to the loan.
+
+      - name: loan_type
+        description: Type/category of the loan (e.g., home, personal, auto).
+        tests:
+          - accepted_values:
+              values: ['Business Loan', 'Personal Loan', 'Education Loan', 'Car Loan', 'Home Loan']
+
+      - name: principal_amount
+        description: The original amount issued for the loan.
+        tests:
+          - not_null        
+      - name: interest_rate
+        description: Annual interest rate applied to the loan.
+        tests:
+          - not_null
+
+      - name: start_date
+        description: Date when the loan period begins.
+        tests:
+          - not_null
+
+      - name: end_date
+        description: Date when the loan is scheduled to end.
+
+      - name: status
+        description: Current status of the loan (e.g., active, closed, defaulted).
+        tests:
+          - not_null
+

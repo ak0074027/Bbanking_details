@@ -1,0 +1,44 @@
+version: 2
+
+models:
+  - name: int_customer_loan_data
+    description: " loan data combining loans and customer info"
+    tags: ['yml_int_customer_loan_data']
+    columns:
+      - name: Loan_ID
+        tests:
+          - unique
+          - not_null
+
+      - name: Customer_ID
+        tests:
+          - not_null
+      - name: Principal_Amount
+        tests:
+          - not_null
+
+      - name: Interest_Rate
+        tests:
+          - not_null
+
+
+      - name: Start_Date
+        tests:
+          - not_null
+
+      - name: End_Date
+        tests:
+          - not_null
+
+
+      - name: Status
+        tests:
+          - not_null
+
+      - name: Loan_Status
+        tests:
+          - not_null
+
+      - name: Email
+        tests:
+          - not_null

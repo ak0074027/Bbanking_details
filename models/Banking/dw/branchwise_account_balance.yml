@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: branchwise_account_balance
+    description: >
+      Aggregated account summary per branch. Includes total accounts,
+      total balance, and average balance.
+    tags: ['branchwise_account_balance']  
+    columns:
+      - name: branch_id
+        description: Unique identifier of the branch.
+
+      - name: branch_name
+        description: Name of the branch.
+ 
+      - name: total_accounts
+        description: Number of accounts associated with the branch.
+
+ 
+      - name: total_balance
+        description: Total balance of all accounts in the branch.
+
+
+      - name: average_balance
+        description: Average balance of accounts in the branch.
+ 

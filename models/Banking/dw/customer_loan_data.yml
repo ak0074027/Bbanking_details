@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: customer_loan_data
+    description: "Contains detailed information about customer loans."
+    tags: ["yml_customer_loand_data"]
+    columns:
+      - name: loan_id
+        description: "Unique identifier for the loan."
+      - name: customer_id
+        description: "Unique identifier for the customer."
+      - name: customer_full_name
+        description: "Full name of the customer."
+      - name: dob
+        description: "Date of birth of the customer."
+      - name: email
+        description: "Email address of the customer."
+      - name: phone
+        description: "Phone number of the customer."
+      - name: account_id
+        description: "Account identifier associated with the loan."
+      - name: loan_type
+        description: "Type/category of the loan."
+      - name: principal_amount
+        description: "Original principal amount of the loan."
+      - name: interest_rate
+        description: "Interest rate applied to the loan."
+      - name: start_date
+        description: "Date when the loan started."
+      - name: end_date
+        description: "Date when the loan is expected to end or matured."
+      - name: status
+        description: "Current status of the loan."
+      - name: loan_duration_days
+        description: "Duration of the loan in days."
+      - name: total_interest
+        description: "Total interest amount to be paid on the loan."
+      - name: loan_status
+        description: "Short status code of the loan (e.g., active, closed)."

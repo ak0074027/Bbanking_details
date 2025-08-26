@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: account_summary
+    description: >
+      Aggregated account summary per branch. Includes total accounts,
+      total balance, and average balance.
+    tags: ['yml_int_account_branch_data']  
+    columns:
+      - name: branch_id
+        description: Unique identifier of the branch.
+        tests:
+          - not_null
+          - unique  # Since aggregation is by branch_id, each should be unique
+
+      - name: branch_name
+        description: Name of the branch.
+        tests:
+          - not_null
+
+      - name: total_accounts
+        description: Number of accounts associated with the branch.
+        tests:
+          - not_null
+          - accepted_range:
+              min_value: 0
+
+      - name: total_balance
+        description: Total balance of all accounts in the branch.
+        tests:
+          - not_null
+          - accepted_range:
+              min_value: 0
+
+      - name: average_balance
+        description: Average balance of accounts in the branch.
+        tests:
+          - not_null
+          - accepted_range:
+              min_value: 0
