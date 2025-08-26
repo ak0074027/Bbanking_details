@@ -18,7 +18,6 @@ with
             payment_id,
             transaction_id,
             account_id,
-            customer_id as payment_customer_id,
             card_id,
             payment_mode,
             payment_status
@@ -26,13 +25,6 @@ with
         from {{ ref("int_payment_summary") }}
     )
 
-select
-    a.*,
-    p.payment_id,
-    p.transaction_id,
-    p.customer_id as payment_customer_id,
-    p.card_id,
-    p.payment_mode,
-    p.payment_status
+select a.*, p.payment_id, p.transaction_id, p.card_id, p.payment_mode, p.payment_status
 from payment p
 left join account a on p.account_id = a.account_id
