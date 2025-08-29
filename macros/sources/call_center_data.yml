@@ -1,0 +1,32 @@
+version: 2
+
+sources:
+  - name: call_center_data
+    database: SNOWFLAKE_SAMPLE_DATA  # optional, if different from profile default
+    schema: TPCDS_SF10TCL
+    tables:
+      - name: CALL_CENTER
+      - name: CATALOG_PAGE
+      - name: CATALOG_RETURNS
+      - name: CATALOG_SALES
+      - name: CUSTOMER
+      - name: CUSTOMER_ADDRESS
+      - name: CUSTOMER_DEMOGRAPHICS
+      - name: DATE_DIM
+      - name: HOUSEHOLD_DEMOGRAPHICS
+      - name: INCOME_BAND
+      - name: INVENTORY
+      - name: ITEM
+      - name: PROMOTION
+      - name: REASON
+      - name: SHIP_MODE
+      - name: STORE
+      - name: STORE_RETURNS
+      - name: STORE_SALES
+      - name: TIME_DIM
+      - name: WAREHOUSE
+      - name: WEB_PAGE
+      - name: WEB_RETURNS
+      - name: WEB_SALES
+      - name: WEB_SITE
+
