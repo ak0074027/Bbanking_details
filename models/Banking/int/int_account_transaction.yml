@@ -1,0 +1,48 @@
+version: 2
+
+models:
+  - name: int_account_transactions
+    description: >
+      This model combines account data with related transaction details by performing
+      a left join from `wrk_account_data` to `wrk_transaction_data` on `account_id`.
+      It contains one row per transaction, with account-level details duplicated per transaction.
+    tags: ['yml_int_account_transactions']    
+    columns:
+      - name: account_id
+        description: Unique identifier for the account. Shared across transactions.
+        tests:
+          - not_null
+
+      - name: customer_id
+        description: Unique identifier for the customer who owns the account.
+        tests:
+          - not_null
+
+      - name: branch_id
+        description: Identifier for the branch where the account is held.
+
+      - name: account_type
+        description: Type of the account (e.g., Savings, Checking, Loan).
+
+      - name: balance
+        description: Current balance in the account at the time of data snapshot.
+
+      - name: transaction_id
+        description: Unique identifier for the transaction.
+        tests:
+          - unique:
+              config:
+                where: "transaction_id is not null"  # Exclude NULLs from uniqueness test
+
+      - name: transaction_type
+        description: Type of transaction (e.g., Deposit, Withdrawal, Transfer).
+
+      - name: amount
+        description: Amount of the transaction. Positive for deposits, negative for withdrawals.
+
+      - name: transaction_date
+        description: Date the transaction was made.
+
+      - name: description
+        description: Free-text field describing the transaction details.
+

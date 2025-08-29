@@ -1,0 +1,59 @@
+version: 2
+
+models:
+  - name: customer_account_transaction
+    description: >
+      Combines customer details with their account and transaction data,
+      joining the intermediate models `int_account_transaction` and `int_customer_account_details`.
+    tags: ['customer_account_transaction']    
+    columns:
+      - name: customer_id
+        description: Unique identifier for each customer.
+
+      - name: first_name
+        description: First name of the customer.
+
+      - name: last_name
+        description: Last name of the customer.
+
+      - name: dob
+        description: Date of birth of the customer.
+
+      - name: email
+        description: Email address of the customer.
+
+      - name: phone
+        description: Phone number of the customer.
+
+      - name: account_id
+        description: Unique identifier for the customer’s account.
+
+      - name: account_type
+        description: Type of the account (e.g., savings, checking).
+
+      - name: balance
+        description: Current balance in the account.
+
+      - name: account_created_at
+        description: Timestamp when the account was created.
+
+      - name: branch_name
+        description: Name of the bank branch associated with the customer.
+
+      - name: branch_address
+        description: Physical address of the bank branch.
+
+      - name: transaction_id
+        description: Unique identifier for the transaction.
+
+      - name: transaction_type
+        description: Type of transaction (e.g., deposit, withdrawal).
+
+      - name: amount
+        description: Amount of money involved in the transaction.
+
+      - name: transaction_date
+        description: Date when the transaction occurred.
+
+      - name: description
+        description: Text description or memo for the transaction.
