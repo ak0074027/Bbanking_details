@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: order_data
+    database: SNOWFLAKE_SAMPLE_DATA  # optional, if different from profile default
+    schema: TPCH_SF1
+    tables:
+      - name: CUSTOMER
+      - name: LINEITEM
+      - name: NATION
+      - name: ORDERS
+      - name: PART
+      - name: PARTSUPP
+      - name: REGION
+      - name: SUPPLIER
+  
