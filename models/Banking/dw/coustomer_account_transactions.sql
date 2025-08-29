@@ -12,7 +12,6 @@
     c.account_id,
     c.account_type,
     c.balance,
-    c.created_at AS account_created_at,
     c.branch_name,
     c.address AS branch_address,
 	a.branch_id,
