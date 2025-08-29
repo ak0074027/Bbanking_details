@@ -13,7 +13,6 @@
     c.account_type,
     c.balance,
     c.branch_name,
-    c.address AS branch_address,
 	a.branch_id,
     a.transaction_id,
     a.transaction_type,
