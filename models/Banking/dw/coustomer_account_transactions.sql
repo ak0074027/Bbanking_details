@@ -22,4 +22,5 @@
     a.transaction_date,
     a.description,
 FROM {{ ref('int_customer_account_details ') }} c
-LEFT JOIN {{ ref('int_account_transaction') }} a  ON c.customer_id = a.customer_id
+LEFT JOIN {{ ref('int_account_transaction') }} a 
+ ON c.customer_id = a.customer_id
