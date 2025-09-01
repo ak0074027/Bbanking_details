@@ -1,11 +1,12 @@
 version: 2
 
 models:
-  - name: stg_card
+  - name: wrk_card_data
     description: >
       Staging model for the Card table. Contains information about debit or credit cards 
       issued to customers, including type, issuance and expiry dates, and card status.
       This table is sourced directly from the raw `Card` table in the database.
+    tags: ["yml_wrk_card_data"]  
     columns:
       - name: Card_ID
         description: Unique identifier for each card.
