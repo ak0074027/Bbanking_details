@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: wrk_audit_log
+    description: >
+      Staging model for the Audit_Log table. Tracks user actions performed on various entities 
+      in the system, such as inserts, updates, or deletes. Useful for auditing changes and 
+      understanding data lineage and user activity.
+    tags: ["yml_wrk_audit_log_data "]  
+    columns:
+      - name: Log_ID
+        description: Unique identifier for each audit log entry.
+
+      - name: Entity_Name
+        description: >
+          Name of the entity (e.g., table or object) on which the action was performed.
+
+      - name: Entity_ID
+        description: >
+          The ID of the specific entity record that was affected by the action.
+
+      - name: Action
+        description: >
+          The type of action performed, such as 'INSERT', 'UPDATE', or 'DELETE'.
+
+      - name: Timestamp
+        description: >
+          Timestamp when the action occurred. Useful for historical tracking and ordering events.
+
+      - name: User_ID
+        description: >
+          ID of the employee (user) who performed the action.
