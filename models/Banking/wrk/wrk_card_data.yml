@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: stg_card
+    description: >
+      Staging model for the Card table. Contains information about debit or credit cards 
+      issued to customers, including type, issuance and expiry dates, and card status.
+      This table is sourced directly from the raw `Card` table in the database.
+    columns:
+      - name: Card_ID
+        description: Unique identifier for each card.
+
+
+      - name: Account_ID
+        description: Foreign key referencing the Account to which the card is linked.
+
+      - name: Card_Type
+        description: >
+          Type of card issued, such as 'Credit', 'Debit', or other financial product types.
+
+      - name: Issued_Date
+        description: The date when the card was issued to the customer.
+
+      - name: Expiry_Date
+        description: The expiration date of the card.
+
+      - name: CVV
+        description: >
+          Card Verification Value used for security verification during online transactions.
+
+      - name: Status
+        description: >
+          Current status of the card (e.g., 'Active', 'Blocked', 'Expired', etc.).
