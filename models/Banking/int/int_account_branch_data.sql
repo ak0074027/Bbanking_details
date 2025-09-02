@@ -32,6 +32,7 @@ aggregated as (
         sum(balance) as total_balance,
         avg(balance) as average_balance
     from joined
+    
     group by branch_id, branch_name
 )
 

@@ -10,7 +10,7 @@ with loan_data as
         End_Date,
         Status
 ----from BANKING_DB.BANING_DETAILS.LOAN
-FROM {{ source('banking_data', 'Loan') }}
+FROM {{ source('banking_data', 'FACT_LOAN') }}
 
 
 )

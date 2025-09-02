@@ -5,16 +5,16 @@ sources:
     database: BANKING_DB  # optional, if different from profile default
     schema: BANING_DETAILS
     tables:
-      - name: Customer
-      - name: Branch
-      - name: Employee
-      - name: Account
-      - name: Transaction
-      - name: Loan
-      - name: Credit_Score
-      - name: Payment
-      - name: ATM
-      - name: AUDIT_LOG
-      - name: CARD
+      - name: DIM_ACCOUNT
+      - name: DIM_ATM
+      - name: DIM_BRANCH
+      - name: DIM_CARD
+      - name: DIM_CUSTOMER
+      - name: DIM_EMPLOYEE
       - name: EVENTS_TABLE
-      - name: INSURANCE
+      - name: FACT_AUDIT_LOG
+      - name: FACT_CREDIT_SCORE
+      - name: FACT_INSURANCE
+      - name: FACT_LOAN
+      - name: FACT_PAYMENT
+      - name: FACT_TRANSACTION
