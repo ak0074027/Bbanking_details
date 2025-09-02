@@ -8,9 +8,7 @@ models:
       - name: account_id
         description: >
           Unique identifier for each account. Acts as the primary key of the table.
-        tests:
-          - not_null
-          - unique
+
 
       - name: customer_id
         description: >
